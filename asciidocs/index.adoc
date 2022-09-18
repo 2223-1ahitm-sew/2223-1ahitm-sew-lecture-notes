@@ -1,4 +1,7 @@
 = Lecture Notes 22/23 - 1ahitm - SEW
 ifndef::imagesdir[:imagesdir: images]
 
-image::img.png[]
+[plantuml,cld,png]
+----
+include::plantuml/cld.puml[]
+----
