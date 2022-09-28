@@ -1,0 +1,122 @@
+= Übung 4 - Hello World mit Erweiterungen
+Thomas W. Stütz
+1.0.0, {docdate}: Softwareentwicklung
+ifndef::imagesdir[:imagesdir: images]
+//:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
+:sourcedir: ../src/main/java
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+:experimental:
+
+////
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+////
+
+// print the toc here (not at the default position)
+//toc::[]
+
+== Lehrziele
+
+* Kennenlernen des Schulnetzes
+* Einfache Anweisungen
+* Verwendung des Compilers
+
+== Aufgabe 1 - Schulnetz
+
+* Starten Sie Linux
+* Einstieg ins Schulnetz (Benutzername, Passwort)
+
+== Aufgabe 2 - Moodle
+* Schreiben Sie sich in Moodle <https://edufs.edu.htl-leonding.ac.at/moodle> in der
+** Kategorie "_Programmieren_"
+** Kurs "_SEW 1AHITM Stütz 2223_" ein.
+** Einschreibeschlüssel: __java__
+
+== Aufgabe 3 - Lecture Notes
+
+* Öffnen Sie in einem Browser http://bit.ly/htl-leonding[]
+* Öffnen Sie in den "Lecture Notes" den Link https://2223-1ahitm-sew.github.io/2223-1ahitm-sew-lecture-notes/[1ahtim-sew^].
+
+== Aufgabe 4 - GitHub Education
+
+* Erstellen Sie eines GitHub-Accounts und Anmeldung zum Education Programm
+. Erstellen Sie einen Standard-Github-Account
+** Verwenden Sie als Username: <Vorname><Nachname> zB MaxMustermann
++
+image::github-create-account.png[]
+
+. Öffnen  Sie https://education.github.com/[^]
+. Klicken Sie auf kbd:[Join Global Campus >]
++
+image::github-create-edu-account.png[]
+
+
+== Aufgabe 5 - HTL-Mail ansehen
+
+* Anschließend öffnen Sie die Seite https://studentsmx.htl-leonding.ac.at/[^]
+* mit inXXXXXX oder itXXXXXX und aktuellem Password einloggen
+
+== Aufgabe 6 - Jetbrains Lizenzen erhalten
+
+* Als Arbeitsumgebung für das Programmieren verwenden wir "IntelliJ Ultimate" von der Fa. Jetbrains
+* Daher müssen wir
+
+. eine Lizenz für _IntelliJ Ultimate_ erhalten
+. auf unserem PC zu Hause _IntelliJ Ultimate_ installieren
+
+* Wenn man eine htl-leonding.ac.at - email Adresse hat erhält man Lizenzen für fast alle Jetbrains-Produkte
+
+* Verwenden Sie diese http://edufs.edu.htl-leonding.ac.at/~t.stuetz/hugo_assets/misc/jetbrains-registrierung-studentenaccount.pdf[Anleitung^] um die Lizenzen zu erhalten
+
+== Aufgabe 7 - Am PC zu Hause eine Java JDK installieren
+
+IMPORTANT: Nicht in der Schule durchführen!
+
+* https://adoptium.net/installation/[Temurin JDK^] installieren
+
+image::temurin-install.png[]
+
+== Aufgabe 8 - Am PC zu Hause IntelliJ installieren
+
+IMPORTANT: Nicht in der Schule durchführen!
+
+* Öffnen Sie die Seite der https://www.jetbrains.com/toolbox-app/[Toolbox-App^].
+* Installieren Sie die Toolbox-App
+* Starten Sie die Toolbox-App
+** Tipp: Starten Sie die Toolbox beim System-Startup
++
+image::toolbox-app-settings.png[]
+* Installieren Sie in der Toolbox _IntelliJ Ultimate_
++
+image::toolbox-app-install-intellij.png[]
+
+
+[TIP]
+.Community Edition
+====
+Man kann anstelle von IntelliJ Ultimate auch die Community Edition installieren. Hier werden keine Lizenzen verlangt.
+
+image::toolbox-app-intellij-community.png[^]
+====
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

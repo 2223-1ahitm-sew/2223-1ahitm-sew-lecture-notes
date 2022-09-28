@@ -138,7 +138,11 @@ public class Ue02_AddNumbers {
 ----
 
 
+== 2022-09-29 (Do.)
 
+* Praktisscher Unterricht mit Aistleitner, Köck, Stütz
+
+<<uebung04.adoc,Übung 04 - Vorbereiten des Toolings>>
 
 
 
