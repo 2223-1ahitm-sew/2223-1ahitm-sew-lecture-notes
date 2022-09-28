@@ -22,8 +22,42 @@ ifdef::backend-html5[]
 
 == 2022-09-22
 
+.Java Quellcode
+----
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello World, 1ahitm");
+  }
+}
+----
 
 
+.Zunächst wird der Quellcode compiliert
+----
+javac HelloWorld.java
+----
+
+.Man erhält ein class-File
+----
+ls -lh
+----
+
+.Ausgabe am Bildschirm
+----
+drwxr-xr-x   4 stuetz  staff   128B Sep 28 10:01 .
+drwxrwxrwx@ 25 stuetz  staff   800B Sep 26 09:45 ..
+-rw-r--r--   1 stuetz  staff   432B Sep 28 10:01 HelloWorld.class
+-rw-r--r--   1 stuetz  staff   121B Sep 15 09:44 HelloWorld.java
+----
+
+----
+java HelloWorld
+----
+
+.Ausgabe am Bildschirm
+----
+Hello World, Seppl
+----
 
 
 
