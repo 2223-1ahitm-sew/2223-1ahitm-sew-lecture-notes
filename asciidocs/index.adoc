@@ -142,7 +142,7 @@ public class Ue02_AddNumbers {
 
 * Praktisscher Unterricht mit Aistleitner, Köck, Stütz
 
-<<uebung04.adoc,Übung 04 - Vorbereiten des Toolings>>
+<<uebung04.adoc#,Übung 04 - Vorbereiten des Toolings>>
 
 
 
