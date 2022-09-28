@@ -1,0 +1,55 @@
+= Visitenkarte
+
+== Lehrziele
+
+* Verwendung von Kommentaren
+* Die Ausgabe von formatiertem Text auf die Konsole
+
+== Aufgabenstellung
+
+Lesen Sie von der Konsole Name und Wohnort einer Person in zwei Variablen ein und geben Sie danach eine Visitenkarte aus.
+
+=== Ausgabe
+
+[source,java]
+----
+Geben Sie Ihren Namen ein   : Tom
+Geben Sie Ihren Wohnort ein : Leonding
+
+Ausgabe
+**************************
+* Tom
+**************************
+* Leonding
+**************************
+----
+
+=== Erweiterte Ausgabe
+
+----
+Geben Sie Ihren Namen ein   : Tom
+Geben Sie Ihren Wohnort ein : Leonding
+
+Erweiterte Ausgabe
+**************************
+* Tom                    *
+**************************
+* Leonding               *
+**************************
+----
+
+=== Hinweis
+
+Fügen sie einen Blockkommentar am Beginn ihrer Quellcodedatei ein, die Schule, Klasse, ihren Namen und eine Kurzbeschreibung ihres Programms enthält:
+
+----
+/*--------------------------------------------------------------
+ *				HTBLA-Leonding / Klassen: <CLASSNAME>
+ *--------------------------------------------------------------
+ *              <NAME> 
+ *--------------------------------------------------------------
+ * Beschreibung:
+ * ...
+ *--------------------------------------------------------------
+*/
+----

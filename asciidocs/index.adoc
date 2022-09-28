@@ -140,12 +140,14 @@ public class Ue02_AddNumbers {
 
 == 2022-09-29 (Do.)
 
-* Praktisscher Unterricht mit Aistleitner, Köck, Stütz
+* Praktischer Unterricht mit Aistleitner, Köck, Stütz
 
 <<uebung04.adoc#,Übung 04 - Vorbereiten des Toolings>>
 
 
+<<visitenkarte.adoc#,Übung 05 - Visitenkarte>>
 
+<<taschenrechner.adoc#,Übung 06 - Taschenrechner>>
 
 
 
