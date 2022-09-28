@@ -23,6 +23,7 @@ ifdef::backend-html5[]
 == 2022-09-22
 
 .Java Quellcode
+[source,java]
 ----
 public class HelloWorld {
   public static void main(String[] args) {
@@ -58,6 +59,111 @@ java HelloWorld
 ----
 Hello World, 1ahitm!
 ----
+
+
+== 2022-09-28 (Mi.)
+
+* Supplierung Prof. Köck
+
+[source,java]
+----
+import java.util.Scanner;
+
+public class Ue01_HelloWorld {
+    public static void main(String[] args) {
+        // Delaration einer Variable:
+        //    Anlegen einer neuen Variable
+        //    mit dem Namen 'name'
+        //    vom Typ 'String'
+        String name;
+        // Zuweisung eines Werts zu einer Variable
+        name = "Johann";
+
+        // Alternative: Deklaration und Erstzuweisung in einer Anweisung
+        // String name = "Johann";
+
+        // Ask user for his/her name
+        System.out.print("What's your name? ");
+        Scanner sc = new Scanner(System.in);
+        name = sc.nextLine();
+
+
+
+        // + ist ein Textverknüpfungs-Operator
+        System.out.println("Hello, " + name + "!");
+    }
+}
+----
+
+[source,java]
+----
+import java.util.Scanner;
+
+public class Ue02_AddNumbers {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        //Zahlen-Datentyp
+        //int number1;
+        //sc.nextInt();
+
+        // Gib die 1. Zahl ein: 13
+        // Gib die 2. Zahl ein: 17
+        // 13 + 17 = 30
+
+        // Declare variables
+        int number1;
+        int number2;
+        int sum;
+
+        // Get numbers from user
+        System.out.print("Gib die 1. Zahl ein: ");
+        number1 = sc.nextInt();
+        System.out.print("Gib die 2. Zahl ein: ");
+        number2 = sc.nextInt();
+
+        // Calculate sum
+        sum = number1 + number2;
+
+        // Print calculation and result
+        System.out.println(number1 + number2 + " = " + sum);
+
+        // Wenn fertig:
+        // Neues Projekt: Ue03_Waehrungsumrechnung
+        // EURO-Betrag wird eingelesen und in GBP und USD umgewandelt
+        // Aktuelle Wechselkurs im Internet recherchieren
+    }
+}
+----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
