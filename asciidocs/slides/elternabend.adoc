@@ -1,0 +1,44 @@
+= Elternabend 1ahitm
+6. Oktober 2022
+1.0.0, {docdate}: Softwareentwicklung
+ifndef::imagesdir[:imagesdir: ../images]
+:customcss: css/presentation.css
+:icons: font
+
+[%notitle]
+== Stundenplan
+
+image::stundenplan.png[background, size="contain"]
+
+== Programmieren im 1. Jg.
+
+[.font-smaller]
+* hauptsächlich Java
+* Ziele:
+** Grundfertigkeiten der Programmierung erlernen
+** Vorgaben genau "lesen" und analysieren
+** Problemlösungsdenken entwickeln
+* Voraussetzungen
+** logisches Denkvermögen
+** abstraktes Denken
+** üben, üben, üben, ...
+
+== Infrastruktur beim Progr.
+
+* Github
+* https://edufs.edu.htl-leonding.ac.at/moodle/course/view.php?id=3760[Moodle^]
+* http://bit.ly/htl-leonding[Lecture Notes^]
+* Discord
+** Distance Learning
+** Rasche Hilfe - Online Unterstützung
+
+
+== Entschuldigungen
+
+image::pexels-monstera-5841848.jpg[background, size=cover, opacity=0.5]
+
+
+* die Anzahl machts ...
+*
+
+== Probleme
