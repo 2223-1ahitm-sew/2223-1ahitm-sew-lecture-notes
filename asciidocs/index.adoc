@@ -144,16 +144,24 @@ public class Ue02_AddNumbers {
 
 <<uebung04.adoc#,Übung 04 - Vorbereiten des Toolings>>
 
+* Anmelden bei github
 
+
+== 2022-10-04 (Di.)
+
+* Was ist ein Variable: 02 Grundlagen.pdf
+
+////
 <<visitenkarte.adoc#,Übung 05 - Visitenkarte>>
 
 <<taschenrechner.adoc#,Übung 06 - Taschenrechner>>
+////
 
+== 2022-10-04
 
-
-
-
-
+* Grundlagen der Formatierung (System.out.printf(...))
+* Aus**checken** der Übung
+* Öffnen in der IDE
 
 
 
