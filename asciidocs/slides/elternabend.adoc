@@ -5,6 +5,9 @@ ifndef::imagesdir[:imagesdir: ../images]
 :customcss: css/presentation.css
 :icons: font
 
+[.lightbg,background-image="kennenlerntage.png",background-size="contain",background-opacity="0.7"]
+== Willkommen zum Elternabend der 1ahitm
+
 [%notitle]
 == Stundenplan
 
@@ -23,6 +26,19 @@ image::stundenplan.png[background, size="contain"]
 ** logisches Denkvermögen
 ** abstraktes Denken
 ** üben, üben, üben, ...
+
+
+== Didaktische Grundsätze
+
+[%step,.font-smaller]
+* Transparenz
+* Anleitung zur Selbständigkeit
+* Nicht aufgeben - auch bei Rückschlägen
+* Ergebnis
+** Brauchbare Skills für zukünftiges Arbeitsleben
+** teamfähig, hilfsbereit
+** Persönlichkeit
+
 
 [.lightbg,background-video="videos/keyboard.mp4",background-video-loop="true",background-opacity="0.7"]
 == Infrastruktur beim Progr.
@@ -44,9 +60,13 @@ image::stundenplan.png[background, size="contain"]
 
 
 
-[.lightbg,background-image="pexels-monstera-5841848.jpg",background-size="contain",background-opacity="0.5"]
+[.lightbg,background-image="pexels-monstera-5841848.jpg",background-size="contain",background-opacity="0.7"]
 == Entschuldigungen
 
 * die Anzahl machts ...
 * ist Antrag auf Entschuldigung
 * Belege entweder in Mappe zu Formular und / oder ins Discord
+
+
+[.lightbg,background-video="videos/pexels-karolina-grabowska-8142390.mp4",background-video-loop="true",background-opacity="0.7"]
+== VIEL ERFOLG FÜR IHRE KINDER!
