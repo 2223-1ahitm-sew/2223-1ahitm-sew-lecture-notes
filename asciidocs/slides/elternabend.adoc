@@ -10,8 +10,8 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 image::stundenplan.png[background, size="contain"]
 
-== Programmieren im 1. Jg.
 [.lightbg,background-video="videos/woman-study.mp4",background-video-loop="true",background-opacity="0.7"]
+== Programmieren im 1. Jg.
 
 [.font-smaller]
 * hauptsächlich Java
@@ -24,6 +24,7 @@ image::stundenplan.png[background, size="contain"]
 ** abstraktes Denken
 ** üben, üben, üben, ...
 
+[.lightbg,background-video="videos/keyboard.mp4",background-video-loop="true",background-opacity="0.7"]
 == Infrastruktur beim Progr.
 
 * Github
@@ -33,13 +34,19 @@ image::stundenplan.png[background, size="contain"]
 ** Distance Learning
 ** Rasche Hilfe - Online Unterstützung
 
+[.lightbg,background-video="videos/exam.mp4",background-video-loop="true",background-opacity="0.7"]
+== Leistungsfeststellung
 
+* 2 Tests pro Semester
+* Übungen
+* Mitarbeitsgespräche
+* Lernzielkontrollen
+
+
+
+[.lightbg,background-image="pexels-monstera-5841848.jpg",background-size="contain",background-opacity="0.5"]
 == Entschuldigungen
 
-image::pexels-monstera-5841848.jpg[background,size=cover,opacity="0.5"]
-
-
 * die Anzahl machts ...
-*
-
-== Probleme
+* ist Antrag auf Entschuldigung
+* Belege entweder in Mappe zu Formular und / oder ins Discord
