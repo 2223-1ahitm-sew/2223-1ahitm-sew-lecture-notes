@@ -660,7 +660,7 @@ pre.rouge {
 <div class="details">
 <span id="author" class="author">Thomas W. Stütz</span><br>
 <span id="revnumber">version 1.0.0,</span>
-<span id="revdate">2022-10-06</span>
+<span id="revdate">2022-10-07</span>
 <br><span id="revremark">Softwareentwicklung</span>
 </div>
 <div id="toc" class="toc2">
@@ -672,6 +672,7 @@ pre.rouge {
 <li><a href="#_2022_09_29_do">4. 2022-09-29 (Do.)</a></li>
 <li><a href="#_2022_10_04_di">5. 2022-10-04 (Di.)</a></li>
 <li><a href="#_2022_10_04">6. 2022-10-04</a></li>
+<li><a href="#_2022_10_05_supplierung_prof_köck">7. 2022-10-05 (Supplierung Prof. Köck)</a></li>
 </ul>
 </div>
 </div>
@@ -871,11 +872,188 @@ drwxrwxrwx@ 25 stuetz  staff   800B Sep 26 09:45 ..
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_2022_10_05_supplierung_prof_köck"><a class="anchor" href="#_2022_10_05_supplierung_prof_köck"></a>7. 2022-10-05 (Supplierung Prof. Köck)</h2>
+<div class="sectionbody">
+<details>
+<summary class="title">Angabe Turmrechnen</summary>
+<div class="content">
+<div class="paragraph">
+<p>Schreiben Sie ein Programm, das eine ganze Zahl einliest und für diese Zahl eine Turmrechnung durchführt und alle Zwischenergebnisse ausgibt.</p>
+</div>
+<div class="paragraph">
+<p>Bei der Turmrechnung wird die eingegebene Basiszahl mit 2, 3, … 9 der Reihe nach multipliziert, anschließend durch 2, 3, … 9 dividiert, sodass am Ende wieder die Basiszahl entsteht.</p>
+</div>
+<div class="paragraph">
+<p>Hinweise:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Nutzen Sie nur die im Unterricht verwendeten Programmkonzepte!</p>
+</li>
+<li>
+<p>Verwenden Sie einen möglichst großen, ganzzahligen Datentyp!</p>
+</li>
+<li>
+<p>Fehler, welche durch eine zu große Basiszahl verursacht werden, können ignoriert werden!</p>
+</li>
+<li>
+<p>Beachten Sie die Abgaberichtlinien!</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Beispielausgabe:
+Bitte Zahl eingeben: 1234
+
+Turmrechnung
+============
+1234 | *2
+2468 | *3
+7404 | *4
+29616 | *5
+148080 | *6
+888480 | *7
+6219360 | *8
+49754880 | *9
+447793920 | /2
+223896960 | /3
+74632320 | /4
+18658080 | /5
+3731616 | /6
+621936 | /7
+88848 | /8
+11106 | /9
+1234
+
+Turmrechnung formatiert
+=======================
+            1234  | * 2
+            2468  | * 3
+            7404  | * 4
+           29616  | * 5
+          148080  | * 6
+          888480  | * 7
+         6219360  | * 8
+        49754880  | * 9
+       447793920  | / 2
+       223896960  | / 3
+        74632320  | / 4
+        18658080  | / 5
+         3731616  | / 6
+          621936  | / 7
+           88848  | / 8
+           11106  | / 9
+            1234  |</pre>
+</div>
+</div>
+</div>
+</details>
+<details>
+<summary class="title">Source Code Turmrechnen</summary>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Ue04_Turmrechnen</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+
+        <span class="c1">// get base-number from user</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"Bitte Zahl eingeben: "</span><span class="o">);</span>
+        <span class="kt">long</span> <span class="n">number</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="na">nextLong</span><span class="o">();</span>
+
+        <span class="c1">// calculation</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">""</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Turmrechnung"</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"============"</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">number</span> <span class="o">+</span> <span class="s">" | *"</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">number</span> <span class="o">+</span> <span class="s">" | *"</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">3</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">number</span> <span class="o">+</span> <span class="s">" | *"</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">4</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">number</span> <span class="o">+</span> <span class="s">" | *"</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">5</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">number</span> <span class="o">+</span> <span class="s">" | *"</span> <span class="o">+</span> <span class="mi">6</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">6</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">number</span> <span class="o">+</span> <span class="s">" | *"</span> <span class="o">+</span> <span class="mi">7</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">7</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">number</span> <span class="o">+</span> <span class="s">" | *"</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">8</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">number</span> <span class="o">+</span> <span class="s">" | *"</span> <span class="o">+</span> <span class="mi">9</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">9</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">number</span> <span class="o">+</span> <span class="s">" | /"</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">number</span> <span class="o">+</span> <span class="s">" | /"</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">3</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">number</span> <span class="o">+</span> <span class="s">" | /"</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">4</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">number</span> <span class="o">+</span> <span class="s">" | /"</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">5</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">number</span> <span class="o">+</span> <span class="s">" | /"</span> <span class="o">+</span> <span class="mi">6</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">6</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">number</span> <span class="o">+</span> <span class="s">" | /"</span> <span class="o">+</span> <span class="mi">7</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">7</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">number</span> <span class="o">+</span> <span class="s">" | /"</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">8</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">number</span> <span class="o">+</span> <span class="s">" | /"</span> <span class="o">+</span> <span class="mi">9</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">9</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">number</span><span class="o">);</span>
+
+        <span class="c1">// calculation with format</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">""</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Turmrechnung formatiert"</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"======================="</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%16d  | * %d%n"</span> <span class="o">,</span> <span class="n">number</span><span class="o">,</span>  <span class="mi">2</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%16d  | * %d%n"</span> <span class="o">,</span> <span class="n">number</span><span class="o">,</span>  <span class="mi">3</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">3</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%16d  | * %d%n"</span> <span class="o">,</span> <span class="n">number</span><span class="o">,</span>  <span class="mi">4</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">4</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%16d  | * %d%n"</span> <span class="o">,</span> <span class="n">number</span><span class="o">,</span>  <span class="mi">5</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">5</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%16d  | * %d%n"</span> <span class="o">,</span> <span class="n">number</span><span class="o">,</span>  <span class="mi">6</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">6</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%16d  | * %d%n"</span> <span class="o">,</span> <span class="n">number</span><span class="o">,</span>  <span class="mi">7</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">7</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%16d  | * %d%n"</span> <span class="o">,</span> <span class="n">number</span><span class="o">,</span>  <span class="mi">8</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">8</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%16d  | * %d%n"</span> <span class="o">,</span> <span class="n">number</span><span class="o">,</span>  <span class="mi">9</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">9</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%16d  | / %d%n"</span> <span class="o">,</span> <span class="n">number</span><span class="o">,</span>  <span class="mi">2</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%16d  | / %d%n"</span> <span class="o">,</span> <span class="n">number</span><span class="o">,</span>  <span class="mi">3</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">3</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%16d  | / %d%n"</span> <span class="o">,</span> <span class="n">number</span><span class="o">,</span>  <span class="mi">4</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">4</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%16d  | / %d%n"</span> <span class="o">,</span> <span class="n">number</span><span class="o">,</span>  <span class="mi">5</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">5</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%16d  | / %d%n"</span> <span class="o">,</span> <span class="n">number</span><span class="o">,</span>  <span class="mi">6</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">6</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%16d  | / %d%n"</span> <span class="o">,</span> <span class="n">number</span><span class="o">,</span>  <span class="mi">7</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">7</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%16d  | / %d%n"</span> <span class="o">,</span> <span class="n">number</span><span class="o">,</span>  <span class="mi">8</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">8</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%16d  | / %d%n"</span> <span class="o">,</span> <span class="n">number</span><span class="o">,</span>  <span class="mi">9</span> <span class="o">);</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">9</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%16d  |%n"</span> <span class="o">,</span> <span class="n">number</span> <span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+</div>
+</details>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 1.0.0<br>
-Last updated 2022-10-06 15:07:53 UTC
+Last updated 2022-10-07 11:54:32 UTC
 </div>
 </div>
 </body>
