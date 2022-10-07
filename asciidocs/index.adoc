@@ -164,7 +164,163 @@ public class Ue02_AddNumbers {
 * Öffnen in der IDE
 
 
+== 2022-10-05 (Supplierung Prof. Köck)
 
+.Angabe Turmrechnen
+[%collapsible]
+====
+Schreiben Sie ein Programm, das eine ganze Zahl einliest und für diese Zahl eine Turmrechnung durchführt und alle Zwischenergebnisse ausgibt.
+
+Bei der Turmrechnung wird die eingegebene Basiszahl mit 2, 3, … 9 der Reihe nach multipliziert, anschließend durch 2, 3, … 9 dividiert, sodass am Ende wieder die Basiszahl entsteht.
+
+Hinweise:
+
+* Nutzen Sie nur die im Unterricht verwendeten Programmkonzepte!
+* Verwenden Sie einen möglichst großen, ganzzahligen Datentyp!
+* Fehler, welche durch eine zu große Basiszahl verursacht werden, können ignoriert werden!
+* Beachten Sie die Abgaberichtlinien!
+
+----
+Beispielausgabe:
+Bitte Zahl eingeben: 1234
+
+Turmrechnung
+============
+1234 | *2
+2468 | *3
+7404 | *4
+29616 | *5
+148080 | *6
+888480 | *7
+6219360 | *8
+49754880 | *9
+447793920 | /2
+223896960 | /3
+74632320 | /4
+18658080 | /5
+3731616 | /6
+621936 | /7
+88848 | /8
+11106 | /9
+1234
+
+Turmrechnung formatiert
+=======================
+            1234  | * 2
+            2468  | * 3
+            7404  | * 4
+           29616  | * 5
+          148080  | * 6
+          888480  | * 7
+         6219360  | * 8
+        49754880  | * 9
+       447793920  | / 2
+       223896960  | / 3
+        74632320  | / 4
+        18658080  | / 5
+         3731616  | / 6
+          621936  | / 7
+           88848  | / 8
+           11106  | / 9
+            1234  |
+----
+====
+
+
+.Source Code Turmrechnen
+[%collapsible]
+====
+[source,java]
+----
+import java.util.Scanner;
+
+public class Ue04_Turmrechnen {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // get base-number from user
+        System.out.print("Bitte Zahl eingeben: ");
+        long number = sc.nextLong();
+
+        // calculation
+        System.out.println("");
+        System.out.println("Turmrechnung");
+        System.out.println("============");
+        System.out.println(number + " | *" + 2 );
+        number = number * 2;
+        System.out.println(number + " | *" + 3 );
+        number = number * 3;
+        System.out.println(number + " | *" + 4 );
+        number = number * 4;
+        System.out.println(number + " | *" + 5 );
+        number = number * 5;
+        System.out.println(number + " | *" + 6 );
+        number = number * 6;
+        System.out.println(number + " | *" + 7 );
+        number = number * 7;
+        System.out.println(number + " | *" + 8 );
+        number = number * 8;
+        System.out.println(number + " | *" + 9 );
+        number = number * 9;
+        System.out.println(number + " | /" + 2 );
+        number = number / 2;
+        System.out.println(number + " | /" + 3 );
+        number = number / 3;
+        System.out.println(number + " | /" + 4 );
+        number = number / 4;
+        System.out.println(number + " | /" + 5 );
+        number = number / 5;
+        System.out.println(number + " | /" + 6 );
+        number = number / 6;
+        System.out.println(number + " | /" + 7 );
+        number = number / 7;
+        System.out.println(number + " | /" + 8 );
+        number = number / 8;
+        System.out.println(number + " | /" + 9 );
+        number = number / 9;
+        System.out.println(number);
+
+        // calculation with format
+        System.out.println("");
+        System.out.println("Turmrechnung formatiert");
+        System.out.println("=======================");
+        System.out.printf("%16d  | * %d%n" , number,  2 );
+        number = number * 2;
+        System.out.printf("%16d  | * %d%n" , number,  3 );
+        number = number * 3;
+        System.out.printf("%16d  | * %d%n" , number,  4 );
+        number = number * 4;
+        System.out.printf("%16d  | * %d%n" , number,  5 );
+        number = number * 5;
+        System.out.printf("%16d  | * %d%n" , number,  6 );
+        number = number * 6;
+        System.out.printf("%16d  | * %d%n" , number,  7 );
+        number = number * 7;
+        System.out.printf("%16d  | * %d%n" , number,  8 );
+        number = number * 8;
+        System.out.printf("%16d  | * %d%n" , number,  9 );
+        number = number * 9;
+        System.out.printf("%16d  | / %d%n" , number,  2 );
+        number = number / 2;
+        System.out.printf("%16d  | / %d%n" , number,  3 );
+        number = number / 3;
+        System.out.printf("%16d  | / %d%n" , number,  4 );
+        number = number / 4;
+        System.out.printf("%16d  | / %d%n" , number,  5 );
+        number = number / 5;
+        System.out.printf("%16d  | / %d%n" , number,  6 );
+        number = number / 6;
+        System.out.printf("%16d  | / %d%n" , number,  7 );
+        number = number / 7;
+        System.out.printf("%16d  | / %d%n" , number,  8 );
+        number = number / 8;
+        System.out.printf("%16d  | / %d%n" , number,  9 );
+        number = number / 9;
+        System.out.printf("%16d  |%n" , number );
+    }
+}
+----
+====
 
 
 
