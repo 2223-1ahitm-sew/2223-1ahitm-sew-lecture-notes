@@ -1,5 +1,7 @@
 # 2223-1ahitm-sew-lecture-notes
 
+- Präsentation Elternabend 6.10.2022: https://2223-1ahitm-sew.github.io/2223-1ahitm-sew-lecture-notes/slides/elternabend#/
+
 ## Converting
 
 ![](./img/conver_strategy.jpg)
