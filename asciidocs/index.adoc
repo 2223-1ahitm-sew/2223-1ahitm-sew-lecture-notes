@@ -323,6 +323,20 @@ public class Ue04_Turmrechnen {
 ====
 
 
+== 2022-10-13 (Do.)
+
+=== Verzweigungen
+
+* = -> Zuweisung, zB `age = 18;`
+* == -> Vergleich zB `if (a == b) { ... }`
+** bei Zeichenketten `equals` verwenden!!!
+
+
+* IDE
+** Integrierte Entwicklungsumgebung
+** Integrated Development Environment
+
+
 
 
 
