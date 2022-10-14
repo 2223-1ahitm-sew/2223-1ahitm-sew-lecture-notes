@@ -338,7 +338,16 @@ public class Ue04_Turmrechnen {
 
 
 
+=== Modulo - Operator
 
+* Der Operator für eine Division ist ein `/`
+
+** zB `int teiler = 10 % 2;`
+
+* Es gibt auch einen Operator, um den Rest einer Division zu erhalten:
+
+** Modulo-Operator -> `%`
+** int divisionsrest = 10 / 3;
 
 
 
