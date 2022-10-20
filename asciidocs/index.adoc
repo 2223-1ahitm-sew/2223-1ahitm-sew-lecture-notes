@@ -350,8 +350,81 @@ public class Ue04_Turmrechnen {
 ** int divisionsrest = 10 / 3;
 
 
+== 2022-10-20 - LZK und Schleifen
+
+.Gerade Zahlen
+[source,java]
+----
+public class GeradeZahlen {
+    public static void main(String[] args) {
+
+        // Deklaration
+        int zahl = 1;
+
+        // Verarbeitung
+
+        // WHILE-Schleife
+        while (zahl < 100) {
+            if (zahl % 2 == 0) {
+                System.out.println(zahl);
+            }
+            zahl++;
+        }
+
+        // FOR-Schleife
+        for (zahl = 1; zahl < 100; zahl++) {
+            if (zahl % 2 == 0) {
+                System.out.println(zahl);
+            }
+        }
+
+        // performantere Alternative
+        for (zahl = 2; zahl < 100; zahl+=2) {
+            System.out.println(zahl);
+        }
 
 
+        // do-while - Schleife
+        zahl = 2;
+        do {
+            System.out.println(zahl);
+            zahl = zahl + 2;
+        } while(zahl < 100);
+
+
+        // Ausgabe
+    }
+}
+----
+
+* Validierung -> auf Gültigkeit prüfen
+
+.Eingabevalidierung
+[source,java]
+----
+import java.util.Scanner;
+
+public class Eingabevalidierung {
+    public static void main(String[] args) {
+        // Deklaration
+        int jahr;
+        Scanner scanner = new Scanner(System.in);
+
+        // Eingabe
+        // Jahr zw. 2000 und 2020
+
+        do {
+            System.out.print("Geben Sie ein Jahr größer 2000 ein: ");
+            jahr = scanner.nextInt();
+        }while (jahr <= 2000);
+
+        // Verarbeitung
+
+        // Ausgabe
+        System.out.println(jahr);
+    }
+}
+----
 
 
 
