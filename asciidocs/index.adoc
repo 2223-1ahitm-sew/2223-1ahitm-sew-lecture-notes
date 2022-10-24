@@ -427,7 +427,11 @@ public class Eingabevalidierung {
 ----
 
 
+== 2022-11-xx Schreibtischtest
 
+* Warum Schreibtischtest?
+* Wie sieht ein Schreibtischtest aus?
+* Wie sieht ein https://plantuml.com/activity-diagram-beta#sdl[Programmablaufplan^] aus
 
 
 
