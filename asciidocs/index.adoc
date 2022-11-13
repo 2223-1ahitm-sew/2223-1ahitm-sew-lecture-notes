@@ -427,14 +427,75 @@ public class Eingabevalidierung {
 ----
 
 
-== 2022-11-xx Schreibtischtest
+== 2022-11-08 Schreibtischtest
 
 * Warum Schreibtischtest?
 * Wie sieht ein Schreibtischtest aus?
 * Wie sieht ein https://plantuml.com/activity-diagram-beta#sdl[Programmablaufplan^] aus
 
+[source,java]
+----
+public class Fibonacci {
+
+    public static void main(String[] args) {
+
+        int n1 = 0;
+        int n2 = 1;
+        int summe = 1;
+
+        for (int i = 1; i <= 20; i++) {
+            System.out.printf("F(%d): %d%n", i,  summe);
+            summe = n1 + n2;
+            n1 = n2;
+            n2 = summe;
+        }
 
 
+    }
+}
+
+----
+
+.Variablentausch
+[source,java]
+----
+int links = 5;
+int rechts = 3;
+int hand_von_chipmunk = 0;
+
+hand_von_chipmunk = rechts;
+rechts = links;
+links = hand_von_chipmunk;
+
+System.out.println("rechts = " + rechts);
+System.out.println("links = " + links);
+----
+
+== 2022-11-10
+
+image::schreibtischtest-ziffernsumme.jpeg[]
+
+[source,java]
+----
+public class DigitSum {
+
+    public static void main(String[] args) {
+
+        int zahl = 12345;
+        int original_zahl = zahl;
+        int rest = 0;
+        int summe = 0;
+
+        while (zahl > 0) {
+            rest = zahl % 10;
+            summe = summe +rest;
+            zahl = zahl / 10;
+        }
+
+        System.out.printf("Die Ziffernsumme von %d ist %d", original_zahl, summe);
+    }
+}
+----
 
 
 
