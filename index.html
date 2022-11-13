@@ -660,7 +660,7 @@ pre.rouge {
 <div class="details">
 <span id="author" class="author">Thomas W. Stütz</span><br>
 <span id="revnumber">version 1.0.0,</span>
-<span id="revdate">2022-10-24</span>
+<span id="revdate">2022-11-13</span>
 <br><span id="revremark">Softwareentwicklung</span>
 </div>
 <div id="toc" class="toc2">
@@ -680,7 +680,8 @@ pre.rouge {
 </ul>
 </li>
 <li><a href="#_2022_10_20_lzk_und_schleifen">9. 2022-10-20 - LZK und Schleifen</a></li>
-<li><a href="#_2022_11_xx_schreibtischtest">10. 2022-11-xx Schreibtischtest</a></li>
+<li><a href="#_2022_11_08_schreibtischtest">10. 2022-11-08 Schreibtischtest</a></li>
+<li><a href="#_2022_11_10">11. 2022-11-10</a></li>
 </ul>
 </div>
 </div>
@@ -1210,7 +1211,7 @@ Turmrechnung formatiert
 </div>
 </div>
 <div class="sect1">
-<h2 id="_2022_11_xx_schreibtischtest"><a class="anchor" href="#_2022_11_xx_schreibtischtest"></a>10. 2022-11-xx Schreibtischtest</h2>
+<h2 id="_2022_11_08_schreibtischtest"><a class="anchor" href="#_2022_11_08_schreibtischtest"></a>10. 2022-11-08 Schreibtischtest</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -1225,13 +1226,82 @@ Turmrechnung formatiert
 </li>
 </ul>
 </div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Fibonacci</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">n2</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">summe</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"F(%d): %d%n"</span><span class="o">,</span> <span class="n">i</span><span class="o">,</span>  <span class="n">summe</span><span class="o">);</span>
+            <span class="n">summe</span> <span class="o">=</span> <span class="n">n1</span> <span class="o">+</span> <span class="n">n2</span><span class="o">;</span>
+            <span class="n">n1</span> <span class="o">=</span> <span class="n">n2</span><span class="o">;</span>
+            <span class="n">n2</span> <span class="o">=</span> <span class="n">summe</span><span class="o">;</span>
+        <span class="o">}</span>
+
+
+    <span class="o">}</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Variablentausch</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kt">int</span> <span class="n">links</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">rechts</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">hand_von_chipmunk</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+
+<span class="n">hand_von_chipmunk</span> <span class="o">=</span> <span class="n">rechts</span><span class="o">;</span>
+<span class="n">rechts</span> <span class="o">=</span> <span class="n">links</span><span class="o">;</span>
+<span class="n">links</span> <span class="o">=</span> <span class="n">hand_von_chipmunk</span><span class="o">;</span>
+
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"rechts = "</span> <span class="o">+</span> <span class="n">rechts</span><span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"links = "</span> <span class="o">+</span> <span class="n">links</span><span class="o">);</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2022_11_10"><a class="anchor" href="#_2022_11_10"></a>11. 2022-11-10</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="images/schreibtischtest-ziffernsumme.jpeg" alt="schreibtischtest ziffernsumme">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DigitSum</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="kt">int</span> <span class="n">zahl</span> <span class="o">=</span> <span class="mi">12345</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">original_zahl</span> <span class="o">=</span> <span class="n">zahl</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">rest</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">summe</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+
+        <span class="k">while</span> <span class="o">(</span><span class="n">zahl</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">rest</span> <span class="o">=</span> <span class="n">zahl</span> <span class="o">%</span> <span class="mi">10</span><span class="o">;</span>
+            <span class="n">summe</span> <span class="o">=</span> <span class="n">summe</span> <span class="o">+</span><span class="n">rest</span><span class="o">;</span>
+            <span class="n">zahl</span> <span class="o">=</span> <span class="n">zahl</span> <span class="o">/</span> <span class="mi">10</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"Die Ziffernsumme von %d ist %d"</span><span class="o">,</span> <span class="n">original_zahl</span><span class="o">,</span> <span class="n">summe</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 1.0.0<br>
-Last updated 2022-10-24 12:05:01 UTC
+Last updated 2022-11-13 19:11:32 UTC
 </div>
 </div>
 </body>
