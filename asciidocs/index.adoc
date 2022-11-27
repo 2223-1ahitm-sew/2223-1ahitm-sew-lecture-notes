@@ -497,7 +497,33 @@ public class DigitSum {
 }
 ----
 
+== 2022-11-24 Do.
 
+[source,java]
+----
+public class Alphabet {
+    public static void main(String[] args) {
+        String alphabet = "";
+        String eingabe;
+        int diff = 0;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Umwandeln in Großbuchstaben (J/N)? ");
+        eingabe = scanner.nextLine();
+
+        if (eingabe.charAt(0)=='J' || eingabe.charAt(0)=='j') {
+            // Alternativ: eingabe.equalsIgnoreCase("J")
+            diff = 'a' - 'A'; // 32;
+        }
+
+        for (char c='a'; c<='z'; c++) {
+            alphabet = alphabet + (char)(c-diff) + "(" + (int)(c-diff) + ") ";
+        }
+
+        System.out.println(alphabet);
+    }
+}
+----
 
 
 ////
