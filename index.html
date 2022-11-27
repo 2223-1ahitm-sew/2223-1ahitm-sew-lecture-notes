@@ -660,7 +660,7 @@ pre.rouge {
 <div class="details">
 <span id="author" class="author">Thomas W. Stütz</span><br>
 <span id="revnumber">version 1.0.0,</span>
-<span id="revdate">2022-11-13</span>
+<span id="revdate">2022-11-27</span>
 <br><span id="revremark">Softwareentwicklung</span>
 </div>
 <div id="toc" class="toc2">
@@ -682,6 +682,7 @@ pre.rouge {
 <li><a href="#_2022_10_20_lzk_und_schleifen">9. 2022-10-20 - LZK und Schleifen</a></li>
 <li><a href="#_2022_11_08_schreibtischtest">10. 2022-11-08 Schreibtischtest</a></li>
 <li><a href="#_2022_11_10">11. 2022-11-10</a></li>
+<li><a href="#_2022_11_24_do">12. 2022-11-24 Do.</a></li>
 </ul>
 </div>
 </div>
@@ -1297,11 +1298,42 @@ Turmrechnung formatiert
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_2022_11_24_do"><a class="anchor" href="#_2022_11_24_do"></a>12. 2022-11-24 Do.</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Alphabet</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">String</span> <span class="n">alphabet</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+        <span class="nc">String</span> <span class="n">eingabe</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">diff</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+
+        <span class="nc">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"Umwandeln in Großbuchstaben (J/N)? "</span><span class="o">);</span>
+        <span class="n">eingabe</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+
+        <span class="k">if</span> <span class="o">(</span><span class="n">eingabe</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">0</span><span class="o">)==</span><span class="sc">'J'</span> <span class="o">||</span> <span class="n">eingabe</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">0</span><span class="o">)==</span><span class="sc">'j'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="c1">// Alternativ: eingabe.equalsIgnoreCase("J")</span>
+            <span class="n">diff</span> <span class="o">=</span> <span class="sc">'a'</span> <span class="o">-</span> <span class="sc">'A'</span><span class="o">;</span> <span class="c1">// 32;</span>
+        <span class="o">}</span>
+
+        <span class="k">for</span> <span class="o">(</span><span class="kt">char</span> <span class="n">c</span><span class="o">=</span><span class="sc">'a'</span><span class="o">;</span> <span class="n">c</span><span class="o">&lt;=</span><span class="sc">'z'</span><span class="o">;</span> <span class="n">c</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="n">alphabet</span> <span class="o">=</span> <span class="n">alphabet</span> <span class="o">+</span> <span class="o">(</span><span class="kt">char</span><span class="o">)(</span><span class="n">c</span><span class="o">-</span><span class="n">diff</span><span class="o">)</span> <span class="o">+</span> <span class="s">"("</span> <span class="o">+</span> <span class="o">(</span><span class="kt">int</span><span class="o">)(</span><span class="n">c</span><span class="o">-</span><span class="n">diff</span><span class="o">)</span> <span class="o">+</span> <span class="s">") "</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">alphabet</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 1.0.0<br>
-Last updated 2022-11-13 19:11:32 UTC
+Last updated 2022-11-27 10:50:15 UTC
 </div>
 </div>
 </body>
