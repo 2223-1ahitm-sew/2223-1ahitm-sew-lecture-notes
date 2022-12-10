@@ -8,7 +8,6 @@ ifndef::imagesdir[:imagesdir: images]
 :sectnums:    // Nummerierung der Überschriften / section numbering
 :toc: left
 
-
 //Need this blank line after ifdef, don't know why...
 ifdef::backend-html5[]
 
@@ -524,6 +523,123 @@ public class Alphabet {
     }
 }
 ----
+
+== 2022-12-09 Förderkurs
+
+.Triangle
+|===
+|Variante 1 |Variante 2
+
+a|
+
+
+[source,java,highlight=11]
+----
+public static void main(String[] args) {
+
+    for (int j = 1; j <= 7; j++) {
+        for (int i = 0; i < j; i++) {
+            System.out.print("*");
+        }
+        System.out.println();
+        //System.out.println(j);
+    }
+    for (int i = 0; i < 6; i++) {
+        for (int j = 1; j <= 6-i; j++) {
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+}
+----
+
+a|
+[source,java,highlight=11]
+----
+    public static void main(String[] args) {
+
+    for (int j = 1; j <= 7; j++) {
+        for (int i = 0; i < j; i++) {
+            System.out.print("*");
+        }
+        System.out.println();
+        //System.out.println(j);
+    }
+    for (int i = 7; i > 0; i--) {
+        for (int j = 1; j < i; j++) {
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+}
+----
+
+|===
+
+.Ausgabe
+----
+*
+**
+***
+****
+*****
+******
+*******
+******
+*****
+****
+***
+**
+*
+----
+
+.Ziffernsumme
+[source,java]
+----
+public static void main(String[] args) {
+
+    int zahl = 12345;
+    int summe = 0;
+
+    while(zahl > 0){
+        int rest = zahl % 10;
+        summe = summe + rest;
+        zahl = zahl / 10;
+    }
+    System.out.println(summe);
+}
+----
+
+.Ausgabe
+----
+15
+----
+
+.Zähle die Anzahl der 'e'
+[source,java]
+----
+public static void main(String[] args) {
+    String text = "Heute schneit es";
+    int counter = 0;
+
+    for (int i = 0; i < text.length(); i++) {
+        //System.out.println(text.charAt(i));
+        if (text.charAt(i) == 'e') {
+            counter++;
+        }
+    }
+    System.out.println(counter);
+}
+----
+
+.Ausgabe
+----
+4
+----
+
+
+
+
 
 
 ////
