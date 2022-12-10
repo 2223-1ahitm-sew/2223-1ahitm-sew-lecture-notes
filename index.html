@@ -660,7 +660,7 @@ pre.rouge {
 <div class="details">
 <span id="author" class="author">Thomas W. Stütz</span><br>
 <span id="revnumber">version 1.0.0,</span>
-<span id="revdate">2022-11-27</span>
+<span id="revdate">2022-12-10</span>
 <br><span id="revremark">Softwareentwicklung</span>
 </div>
 <div id="toc" class="toc2">
@@ -683,6 +683,7 @@ pre.rouge {
 <li><a href="#_2022_11_08_schreibtischtest">10. 2022-11-08 Schreibtischtest</a></li>
 <li><a href="#_2022_11_10">11. 2022-11-10</a></li>
 <li><a href="#_2022_11_24_do">12. 2022-11-24 Do.</a></li>
+<li><a href="#_2022_12_09_förderkurs">13. 2022-12-09 Förderkurs</a></li>
 </ul>
 </div>
 </div>
@@ -1329,11 +1330,137 @@ Turmrechnung formatiert
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_2022_12_09_förderkurs"><a class="anchor" href="#_2022_12_09_förderkurs"></a>13. 2022-12-09 Förderkurs</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Triangle</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Variante 1</th>
+<th class="tableblock halign-left valign-top">Variante 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="mi">7</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"*"</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+        <span class="c1">//System.out.println(j);</span>
+    <span class="o">}</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+<span class="hll">        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="mi">6</span><span class="o">-</span><span class="n">i</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+</span>            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"*"</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java">    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="mi">7</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"*"</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+        <span class="c1">//System.out.println(j);</span>
+    <span class="o">}</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">7</span><span class="o">;</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">--)</span> <span class="o">{</span>
+<span class="hll">        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+</span>            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"*"</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
+<div class="title">Ausgabe</div>
+<div class="content">
+<pre>*
+**
+***
+****
+*****
+******
+*******
+******
+*****
+****
+***
+**
+*</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Ziffernsumme</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="kt">int</span> <span class="n">zahl</span> <span class="o">=</span> <span class="mi">12345</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">summe</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+
+    <span class="k">while</span><span class="o">(</span><span class="n">zahl</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">){</span>
+        <span class="kt">int</span> <span class="n">rest</span> <span class="o">=</span> <span class="n">zahl</span> <span class="o">%</span> <span class="mi">10</span><span class="o">;</span>
+        <span class="n">summe</span> <span class="o">=</span> <span class="n">summe</span> <span class="o">+</span> <span class="n">rest</span><span class="o">;</span>
+        <span class="n">zahl</span> <span class="o">=</span> <span class="n">zahl</span> <span class="o">/</span> <span class="mi">10</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">summe</span><span class="o">);</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Ausgabe</div>
+<div class="content">
+<pre>15</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Zähle die Anzahl der 'e'</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">String</span> <span class="n">text</span> <span class="o">=</span> <span class="s">"Heute schneit es"</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">text</span><span class="o">.</span><span class="na">length</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="c1">//System.out.println(text.charAt(i));</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">text</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">==</span> <span class="sc">'e'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">counter</span><span class="o">++;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">counter</span><span class="o">);</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Ausgabe</div>
+<div class="content">
+<pre>4</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 1.0.0<br>
-Last updated 2022-11-27 10:50:15 UTC
+Last updated 2022-12-10 11:57:31 UTC
 </div>
 </div>
 </body>
