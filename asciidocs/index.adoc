@@ -646,8 +646,8 @@ public static void main(String[] args) {
 ** input
 ** output
 ** delete
-** input.charAt(j)
 ** delete.charAt(i))
+** input.charAt(j)
 
 IMPORTANT: Achten Sie darauf, für jede Zeile die ausgeführt wird in der Tabelle die korrekten Werte einzutragen.
 
