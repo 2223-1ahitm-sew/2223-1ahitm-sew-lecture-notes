@@ -660,7 +660,7 @@ pre.rouge {
 <div class="details">
 <span id="author" class="author">Thomas W. Stütz</span><br>
 <span id="revnumber">version 1.0.0,</span>
-<span id="revdate">2022-12-10</span>
+<span id="revdate">2022-12-13</span>
 <br><span id="revremark">Softwareentwicklung</span>
 </div>
 <div id="toc" class="toc2">
@@ -684,6 +684,11 @@ pre.rouge {
 <li><a href="#_2022_11_10">11. 2022-11-10</a></li>
 <li><a href="#_2022_11_24_do">12. 2022-11-24 Do.</a></li>
 <li><a href="#_2022_12_09_förderkurs">13. 2022-12-09 Förderkurs</a></li>
+<li><a href="#_2022_12_13">14. 2022-12-13</a>
+<ul class="sectlevel2">
+<li><a href="#_aufgabe_erstellen_sie_zu_folgendem_programmcode_einen_schreibtischtest">14.1. Aufgabe: erstellen sie zu folgendem Programmcode einen Schreibtischtest</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -1456,11 +1461,77 @@ Turmrechnung formatiert
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_2022_12_13"><a class="anchor" href="#_2022_12_13"></a>14. 2022-12-13</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_aufgabe_erstellen_sie_zu_folgendem_programmcode_einen_schreibtischtest"><a class="anchor" href="#_aufgabe_erstellen_sie_zu_folgendem_programmcode_einen_schreibtischtest"></a>14.1. Aufgabe: erstellen sie zu folgendem Programmcode einen Schreibtischtest</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Ihre Wertetabelle soll dabei folgende Spalten haben:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>input</p>
+</li>
+<li>
+<p>output</p>
+</li>
+<li>
+<p>delete</p>
+</li>
+<li>
+<p>input.charAt(j)</p>
+</li>
+<li>
+<p>delete.charAt(i))</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Achten Sie darauf, für jede Zeile die ausgeführt wird in der Tabelle die korrekten Werte einzutragen.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">String</span> <span class="n">input</span> <span class="o">=</span> <span class="s">"halloxhallo"</span><span class="o">;</span>
+    <span class="nc">String</span> <span class="n">delete</span> <span class="o">=</span> <span class="s">"aox"</span><span class="o">;</span>
+    <span class="nc">String</span> <span class="n">output</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">delete</span><span class="o">.</span><span class="na">length</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">input</span><span class="o">.</span><span class="na">length</span><span class="o">();</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">input</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">j</span><span class="o">)</span> <span class="o">!=</span> <span class="n">delete</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">))</span> <span class="o">{</span>
+                <span class="n">output</span> <span class="o">=</span> <span class="n">output</span> <span class="o">+</span> <span class="n">input</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">j</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="n">input</span> <span class="o">=</span> <span class="n">output</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">output</span><span class="o">);</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 1.0.0<br>
-Last updated 2022-12-10 11:57:31 UTC
+Last updated 2022-12-13 20:24:49 UTC
 </div>
 </div>
 </body>
