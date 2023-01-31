@@ -738,6 +738,35 @@ public class Main {
 }
 ----
 
+== 2023-01-31
+
+[source,java]
+----
+        boolean istSonnig = false;
+        boolean habeHausuebungZuMachen = true;
+        boolean habeGuteRegenbekleidung = false;
+
+        System.out.println("istSonnig: " + istSonnig);
+        System.out.println("nicht istSonnig: " + !istSonnig);
+
+        if (istSonnig && habeHausuebungZuMachen) {
+            System.out.println("Ich mache meine HÜ in der guten Stube");
+        } else {
+            System.out.println("ich gehe in den Garten");
+        }
+
+        if (istSonnig || habeGuteRegenbekleidung) {
+            System.out.println("Gehe ich in den Garten");
+        } else {
+            System.out.println("Bleibe in der guten Stube");
+        }
+
+----
+
+
+
+
+
 
 
 ////
